@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과학 - 화산 활동</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-container">
+        <div class="detail-header science">
+            <button class="back-btn" onclick="window.location.href='home.html'">← 돌아가기</button>
+            <div class="detail-title">
+                <div class="subject-tag science-tag">🔬 과학</div>
+                <div class="textbook-name">과학 4-1(강석진)</div>
+                <div class="lesson-title-main">[5차시] 4. 화산 활동으로 어떤 물질이 나올까요?</div>
+                <div class="lesson-pages-main">과68~69쪽, 실관41쪽</div>
+                <div class="unit-name">3. 땅의 변화</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <div class="goal-section">
+                <h3>🎯 학습 목표</h3>
+                <p>화산 활동으로 나오는 물질의 종류와 특징을 설명할 수 있어요.</p>
+            </div>
+
+            <div class="materials-section">
+                <h3>📚 오늘 활동</h3>
+                <div class="activity-list">
+                    <a href="#" class="activity-item">
+                        <div class="activity-number">1</div>
+                        <div class="activity-content">
+                            <span class="activity-icon">🎬</span>
+                            <span class="activity-name">영상: 생각 열기</span>
+                        </div>
+                        <span class="activity-arrow">→</span>
+                    </a>
+                    <a href="#" class="activity-item">
+                        <div class="activity-number">2</div>
+                        <div class="activity-content">
+                            <span class="activity-icon">🔬</span>
+                            <span class="activity-name">탐구 활동</span>
+                        </div>
+                        <span class="activity-arrow">→</span>
+                    </a>
+                    <a href="#" class="activity-item">
+                        <div class="activity-number">3</div>
+                        <div class="activity-content">
+                            <span class="activity-icon">✏️</span>
+                            <span class="activity-name">샘보드: 화산활동 물질</span>
+                        </div>
+                        <span class="activity-arrow">→</span>
+                    </a>
+                    <a href="#" class="activity-item">
+                        <div class="activity-number">4</div>
+                        <div class="activity-content">
+                            <span class="activity-icon">❓</span>
+                            <span class="activity-name">샘퀴즈</span>
+                        </div>
+                        <span class="activity-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="teacher-notice">
+                <div class="notice-header">
+                    <span class="notice-icon">📢</span>
+                    <span class="notice-title">선생님 알림</span>
+                </div>
+                <div class="notice-content">
+                    <div class="notice-item">
+                        <span class="notice-label">준비물</span>
+                        <span class="notice-text">연습장 준비하세요.</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-review" onclick="window.location.href='science-review.html'">
+                📝 나의 학습 리뷰 작성하기
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // 로그인 확인
+        if (!sessionStorage.getItem('studentName')) {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

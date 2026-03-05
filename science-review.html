@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과학 학습 리뷰</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-container">
+        <div class="review-header science">
+            <button class="back-btn" onclick="window.location.href='science-detail.html'">← 돌아가기</button>
+            <h2>📝 나의 학습 리뷰</h2>
+            <div class="review-subject">과학 - 화산 활동으로 어떤 물질이 나올까요?</div>
+        </div>
+
+        <div class="review-content">
+            <form id="scienceReviewForm">
+                <!-- Q1: 감정 -->
+                <div class="question-card">
+                    <div class="question-title">Q1. 오늘 수업 기분은?</div>
+                    <div class="emotion-options">
+                        <label class="emotion-option">
+                            <input type="radio" name="emotion" value="5" required>
+                            <span class="emotion-emoji">😊</span>
+                            <span class="emotion-label">즐거워요</span>
+                        </label>
+                        <label class="emotion-option">
+                            <input type="radio" name="emotion" value="4">
+                            <span class="emotion-emoji">🙂</span>
+                            <span class="emotion-label">좋아요</span>
+                        </label>
+                        <label class="emotion-option">
+                            <input type="radio" name="emotion" value="3">
+                            <span class="emotion-emoji">😐</span>
+                            <span class="emotion-label">보통이에요</span>
+                        </label>
+                        <label class="emotion-option">
+                            <input type="radio" name="emotion" value="2">
+                            <span class="emotion-emoji">😕</span>
+                            <span class="emotion-label">어려워요</span>
+                        </label>
+                        <label class="emotion-option">
+                            <input type="radio" name="emotion" value="1">
+                            <span class="emotion-emoji">😞</span>
+                            <span class="emotion-label">힘들어요</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q2: 어려움 위치 -->
+                <div class="question-card">
+                    <div class="question-title">Q2. 오늘 수업, 어떤 부분이 어려웠나요?</div>
+                    <div class="radio-options">
+                        <label class="radio-option">
+                            <input type="radio" name="difficulty" value="concept" required>
+                            <span class="option-text">📖 개념·내용 이해가 어려웠어요</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="difficulty" value="problem">
+                            <span class="option-text">✏️ 문제 풀기가 어려웠어요</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="difficulty" value="explanation">
+                            <span class="option-text">🗣️ 선생님 설명을 따라가기 어려웠어요</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="difficulty" value="none">
+                            <span class="option-text">😊 딱히 없었어요</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q3: 과학 객관식 문제 -->
+                <div class="question-card highlight">
+                    <div class="question-title">Q3. 화산 분출물이 아닌 것은 무엇일까요?</div>
+                    <div class="radio-options">
+                        <label class="radio-option">
+                            <input type="radio" name="quiz" value="1" required>
+                            <span class="option-text">1. 화산 가스</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="quiz" value="2">
+                            <span class="option-text">2. 용암</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="quiz" value="3">
+                            <span class="option-text">3. 화산재</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="quiz" value="4">
+                            <span class="option-text">4. 나뭇잎</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Q4: 자유응답 -->
+                <div class="question-card">
+                    <div class="question-title">Q4. 선생님에게 하고 싶은 말 <span style="color: #999; font-size: 0.9em;">(선택)</span></div>
+                    <textarea name="message" rows="4" placeholder="선생님에게 하고 싶은 말이 있다면 자유롭게 작성해주세요."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">제출하기</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // 로그인 확인
+        if (!sessionStorage.getItem('studentName')) {
+            window.location.href = 'index.html';
+        }
+
+        // 폼 제출
+        document.getElementById('scienceReviewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = {
+                subject: '과학',
+                emotion: formData.get('emotion'),
+                difficulty: formData.get('difficulty'),
+                quiz: formData.get('quiz'),
+                message: formData.get('message')
+            };
+            
+            console.log('과학 리뷰 제출:', data);
+            
+            // 완료 페이지로 이동
+            window.location.href = 'complete.html?subject=science';
+        });
+    </script>
+</body>
+</html>

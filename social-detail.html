@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사회 - 방위</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-container">
+        <div class="detail-header social">
+            <button class="back-btn" onclick="window.location.href='home.html'">← 돌아가기</button>
+            <div class="detail-title">
+                <div class="subject-tag social-tag">🌍 사회</div>
+                <div class="textbook-name">사회 4-1(설규주)</div>
+                <div class="lesson-title-main">[3차시] 방위를 이용하여 위치를 알아볼까요?</div>
+                <div class="lesson-pages-main">사14~16쪽</div>
+                <div class="unit-name">1. 지도로 만나는 우리 지역 - ① 지도로 살펴본 우리 지역</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <div class="goal-section">
+                <h3>🎯 학습 목표</h3>
+                <p>지도에서 방위를 이용하여 위치를 알아볼 수 있다.</p>
+            </div>
+
+            <div class="materials-section">
+                <h3>📚 오늘 활동</h3>
+                <div class="activity-list">
+                    <a href="#" class="activity-item">
+                        <div class="activity-number">1</div>
+                        <div class="activity-content">
+                            <span class="activity-icon">📖</span>
+                            <span class="activity-name">용어풀이 카드</span>
+                        </div>
+                        <span class="activity-arrow">→</span>
+                    </a>
+                    <a href="#" class="activity-item">
+                        <div class="activity-number">2</div>
+                        <div class="activity-content">
+                            <span class="activity-icon">🎬</span>
+                            <span class="activity-name">영상: 방위의 의미와 방위표</span>
+                        </div>
+                        <span class="activity-arrow">→</span>
+                    </a>
+                    <a href="#" class="activity-item">
+                        <div class="activity-number">3</div>
+                        <div class="activity-content">
+                            <span class="activity-icon">❓</span>
+                            <span class="activity-name">샘퀴즈</span>
+                        </div>
+                        <span class="activity-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="teacher-notice">
+                <div class="notice-header">
+                    <span class="notice-icon">📢</span>
+                    <span class="notice-title">선생님 알림</span>
+                </div>
+                <div class="notice-content">
+                    <div class="notice-item">
+                        <span class="notice-label">준비물</span>
+                        <span class="notice-text">교과서 14~16쪽 꼭 펴놓으세요!</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-review" onclick="window.location.href='social-review.html'">
+                📝 나의 학습 리뷰 작성하기
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // 로그인 확인
+        if (!sessionStorage.getItem('studentName')) {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

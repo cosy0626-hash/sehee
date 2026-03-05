@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘 우리 수업은 - 홈</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-container">
+        <div class="header">
+            <div class="header-top">
+                <h1>오늘 우리 수업은 📚</h1>
+                <div class="student-info" id="studentInfo"></div>
+            </div>
+            <div class="date-info">
+                <span class="date-label">오늘</span>
+                <span class="date-value">3월 5일 (목)</span>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- 오늘의 수업 섹션 -->
+            <section class="today-lessons">
+                <h2 class="section-title">📚 오늘의 수업</h2>
+                <div class="lesson-cards">
+                    <!-- 과학 카드 -->
+                    <a href="science-detail.html" class="lesson-card science">
+                        <div class="lesson-status">
+                            <span class="status-badge status-ongoing">수업 중</span>
+                            <span class="review-badge review-pending">리뷰 미작성</span>
+                        </div>
+                        <div class="lesson-time">1교시</div>
+                        <div class="lesson-info">
+                            <div class="subject-tag science-tag">🔬 과학</div>
+                            <div class="textbook-name">과학 4-1(강석진)</div>
+                            <div class="lesson-title">[5차시] 4. 화산 활동으로 어떤 물질이 나올까요?</div>
+                            <div class="lesson-pages">과68~69쪽, 실관41쪽</div>
+                        </div>
+                    </a>
+
+                    <!-- 사회 카드 -->
+                    <a href="social-detail.html" class="lesson-card social">
+                        <div class="lesson-status">
+                            <span class="status-badge status-scheduled">수업 예정</span>
+                            <span class="review-badge review-pending">리뷰 미작성</span>
+                        </div>
+                        <div class="lesson-time">2교시</div>
+                        <div class="lesson-info">
+                            <div class="subject-tag social-tag">🌍 사회</div>
+                            <div class="textbook-name">사회 4-1(설규주)</div>
+                            <div class="lesson-title">[3차시] 방위를 이용하여 위치를 알아볼까요?</div>
+                            <div class="lesson-pages">사14~16쪽</div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 과목별 수업 기록 섹션 -->
+            <section class="subject-folders">
+                <h2 class="section-title">📁 과목별 수업 기록</h2>
+                
+                <!-- 과학 폴더 -->
+                <div class="folder-card science">
+                    <div class="folder-header" onclick="toggleFolder('scienceFolder')">
+                        <div class="folder-title">
+                            <span class="folder-icon">🔬</span>
+                            <span>과학 4-1(강석진)</span>
+                        </div>
+                        <span class="folder-toggle" id="scienceToggle">▲</span>
+                    </div>
+                    <div class="folder-content open" id="scienceFolder">
+                        <a href="science-detail.html" class="lesson-item active">
+                            <div class="lesson-item-header">
+                                <span class="lesson-number">[5차시]</span>
+                                <span class="lesson-date">3/5</span>
+                                <span class="status-badge status-ongoing">수업 중</span>
+                            </div>
+                            <div class="lesson-item-title">4. 화산 활동으로 어떤 물질이 나올까요?</div>
+                            <div class="lesson-item-pages">과68~69쪽, 실관41쪽</div>
+                            <div class="review-status review-pending">리뷰 미작성</div>
+                        </a>
+                        <div class="lesson-item completed">
+                            <div class="lesson-item-header">
+                                <span class="lesson-number">[4차시]</span>
+                                <span class="lesson-date">3/4</span>
+                            </div>
+                            <div class="lesson-item-title">화산이란 무엇일까요?</div>
+                            <div class="lesson-item-pages">과66~67쪽</div>
+                            <div class="review-status review-completed">✅ 리뷰완료</div>
+                        </div>
+                        <div class="lesson-item completed">
+                            <div class="lesson-item-header">
+                                <span class="lesson-number">[3차시]</span>
+                                <span class="lesson-date">3/3</span>
+                            </div>
+                            <div class="lesson-item-title">땅이 흔들릴 때 어떤 일이 일어날까요?</div>
+                            <div class="lesson-item-pages">과64~65쪽</div>
+                            <div class="review-status review-completed">✅ 리뷰완료</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 사회 폴더 -->
+                <div class="folder-card social">
+                    <div class="folder-header" onclick="toggleFolder('socialFolder')">
+                        <div class="folder-title">
+                            <span class="folder-icon">🌍</span>
+                            <span>사회 4-1(설규주)</span>
+                        </div>
+                        <span class="folder-toggle" id="socialToggle">▼</span>
+                    </div>
+                    <div class="folder-content" id="socialFolder">
+                        <a href="social-detail.html" class="lesson-item active">
+                            <div class="lesson-item-header">
+                                <span class="lesson-number">[3차시]</span>
+                                <span class="lesson-date">3/5</span>
+                                <span class="status-badge status-scheduled">수업 예정</span>
+                            </div>
+                            <div class="lesson-item-title">방위를 이용하여 위치를 알아볼까요?</div>
+                            <div class="lesson-item-pages">사14~16쪽</div>
+                            <div class="review-status review-pending">리뷰 미작성</div>
+                        </a>
+                        <div class="lesson-item completed">
+                            <div class="lesson-item-header">
+                                <span class="lesson-number">[2차시]</span>
+                                <span class="lesson-date">3/4</span>
+                            </div>
+                            <div class="lesson-item-title">지도에서 거리를 알아볼까요?</div>
+                            <div class="lesson-item-pages">사12~13쪽</div>
+                            <div class="review-status review-completed">✅ 리뷰완료</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 하단 네비게이션 -->
+        <div class="bottom-nav">
+            <div class="nav-item active">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">오늘수업</span>
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon">📊</span>
+                <span class="nav-label">나의 기록</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 로그인 확인
+        const studentName = sessionStorage.getItem('studentName');
+        if (!studentName) {
+            window.location.href = 'index.html';
+        } else {
+            document.getElementById('studentInfo').textContent = `${studentName} 학생`;
+        }
+
+        // 폴더 토글
+        function toggleFolder(folderId) {
+            const folder = document.getElementById(folderId);
+            const toggle = document.getElementById(folderId.replace('Folder', 'Toggle'));
+            
+            if (folder.classList.contains('open')) {
+                folder.classList.remove('open');
+                toggle.textContent = '▼';
+            } else {
+                folder.classList.add('open');
+                toggle.textContent = '▲';
+            }
+        }
+    </script>
+</body>
+</html>

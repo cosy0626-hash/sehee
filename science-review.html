@@ -21,17 +21,17 @@
             <form id="scienceReviewForm">
                 <!-- Q1: 감정 -->
                 <div class="question-card">
-                    <div class="question-title">Q1. 오늘 수업 기분은?</div>
+                    <div class="question-title">Q1. 오늘 수업 어땠나요?</div>
                     <div class="emotion-options">
                         <label class="emotion-option">
                             <input type="radio" name="emotion" value="5" required>
                             <span class="emotion-emoji">😊</span>
-                            <span class="emotion-label">즐거워요</span>
+                            <span class="emotion-label">완벽 이해</span>
                         </label>
                         <label class="emotion-option">
                             <input type="radio" name="emotion" value="4">
                             <span class="emotion-emoji">🙂</span>
-                            <span class="emotion-label">좋아요</span>
+                            <span class="emotion-label">거의 이해</span>
                         </label>
                         <label class="emotion-option">
                             <input type="radio" name="emotion" value="3">
@@ -74,30 +74,13 @@
                     </div>
                 </div>
 
-                <!-- Q3: 과학 객관식 문제 -->
-                <div class="question-card highlight">
-                    <div class="question-title">Q3. 화산 분출물이 아닌 것은 무엇일까요?</div>
-                    <div class="radio-options">
-                        <label class="radio-option">
-                            <input type="radio" name="quiz" value="1" required>
-                            <span class="option-text">1. 화산 가스</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="quiz" value="2">
-                            <span class="option-text">2. 용암</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="quiz" value="3">
-                            <span class="option-text">3. 화산재</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="quiz" value="4">
-                            <span class="option-text">4. 나뭇잎</span>
-                        </label>
-                    </div>
+                <!-- Q3: 배운 내용 -->
+                <div class="question-card">
+                    <div class="question-title">Q3. 오늘 배운 내용 중 생각나는 것을 써보세요.</div>
+                    <textarea name="learning" rows="4" placeholder="오늘 배운 내용 중 기억나는 것을 자유롭게 작성해주세요." required></textarea>
                 </div>
 
-                <!-- Q4: 자유응답 -->
+                <!-- Q4: 선생님에게 하고 싶은 말 -->
                 <div class="question-card">
                     <div class="question-title">Q4. 선생님에게 하고 싶은 말 <span style="color: #999; font-size: 0.9em;">(선택)</span></div>
                     <textarea name="message" rows="4" placeholder="선생님에게 하고 싶은 말이 있다면 자유롭게 작성해주세요."></textarea>
@@ -123,7 +106,7 @@
                 subject: '과학',
                 emotion: formData.get('emotion'),
                 difficulty: formData.get('difficulty'),
-                quiz: formData.get('quiz'),
+                learning: formData.get('learning'),
                 message: formData.get('message')
             };
             

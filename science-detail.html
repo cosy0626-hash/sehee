@@ -31,7 +31,7 @@
             <div class="materials-section">
                 <h3>📚 오늘 활동</h3>
                 <div class="activity-list">
-                    <a href="science-lesson.html" class="activity-item">
+                    <a href="#" class="activity-item" onclick="openLessonImage(event)">
                         <div class="activity-number">1</div>
                         <div class="activity-content">
                             <span class="activity-icon">🔬</span>
@@ -81,11 +81,35 @@
         </div>
     </div>
 
+    <!-- 이미지 모달 -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage" src="https://www.genspark.ai/api/files/s/vt9a6t5a" alt="차시 수업">
+    </div>
+
     <script>
         // 로그인 확인
         if (!sessionStorage.getItem('studentName')) {
             window.location.href = 'index.html';
         }
+
+        // 차시 수업 이미지 모달 열기
+        function openLessonImage(event) {
+            event.preventDefault();
+            document.getElementById('imageModal').style.display = 'flex';
+        }
+
+        // 모달 닫기
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        // ESC 키로 모달 닫기
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
     </script>
 </body>
 </html>

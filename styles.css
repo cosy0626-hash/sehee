@@ -764,6 +764,52 @@ body {
     transform: translateX(5px);
 }
 
+/* 학습 맥락 버튼 (파란색 계열) */
+.activity-item.activity-context {
+    border-color: #d0e7ff;
+}
+
+.activity-item.activity-context:hover {
+    background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+    border-color: #4A90E2;
+}
+
+.activity-item.activity-context .activity-number {
+    background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+}
+
+.activity-item.activity-context:hover .activity-number {
+    background: white;
+    color: #4A90E2;
+}
+
+.activity-item.activity-context .activity-arrow {
+    color: #4A90E2;
+}
+
+/* 학습 리뷰 버튼 (주황색 계열) */
+.activity-item.activity-review {
+    border-color: #ffe0d0;
+}
+
+.activity-item.activity-review:hover {
+    background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+    border-color: #FF6B6B;
+}
+
+.activity-item.activity-review .activity-number {
+    background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+}
+
+.activity-item.activity-review:hover .activity-number {
+    background: white;
+    color: #FF6B6B;
+}
+
+.activity-item.activity-review .activity-arrow {
+    color: #FF6B6B;
+}
+
 .btn-review {
     width: 100%;
     padding: 22px;
